@@ -3,15 +3,15 @@ import Hero from "@/components/Hero";
 import WhoWeAre from "@/components/WhoWeAre";
 import WhatWeDo from "@/components/WhatWeDo";
 import Approach from "@/components/Approach";
-import Different from "@/components/Different";
-import Criteria from "@/components/Criteria";
+// import Different from "@/components/Different";
+// import Criteria from "@/components/Criteria";
 import ValueCreation from "@/components/ValueCreation";
-import Process from "@/components/Process";
-import Philosophy from "@/components/Philosophy";
-import Founder from "@/components/Founder";
-import Advisors from "@/components/Advisors";
-import WhyUs from "@/components/WhyUs";
-import ForOwners from "@/components/ForOwners";
+// import Process from "@/components/Process";
+// import Philosophy from "@/components/Philosophy";
+// import Founder from "@/components/Founder";
+// import Advisors from "@/components/Advisors";
+// import WhyUs from "@/components/WhyUs";
+// import ForOwners from "@/components/ForOwners";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -23,15 +23,15 @@ export default function Home() {
       <WhoWeAre />
       <WhatWeDo />
       <Approach />
-      <Different />
+      {/* <Different /> */}
       {/* <Criteria /> */}
       <ValueCreation />
-      <Process />
+      {/* <Process /> */}
       {/* <Philosophy /> */}
       {/* <Founder /> */}
       {/* <Advisors /> */}
-      <WhyUs />
-      <ForOwners />
+      {/* <WhyUs /> */}
+      {/* <ForOwners /> */}
       <Contact />
       <Footer />
     </>

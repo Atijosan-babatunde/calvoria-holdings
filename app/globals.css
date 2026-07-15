@@ -690,6 +690,19 @@ img {
   border-radius: 10px;
   padding: 40px;
 }
+.contact-form-wide {
+  width: 100%;
+}
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+@media (max-width: 620px) {
+  .form-row-split {
+    grid-template-columns: 1fr;
+  }
+}
 .form-row {
   margin-bottom: 20px;
 }
@@ -735,8 +748,6 @@ img {
 .site-footer {
   background: var(--teal-dark);
   color: rgba(255, 255, 255, 0.6);
-  padding: 32px 0;
-  text-align: center;
   font-size: 14px;
 }
 
@@ -1033,72 +1044,46 @@ img {
    "centered heading + icon-card grid" pattern everywhere).
    ========================================================= */
 
-/* ---------- Who We Are: editorial manifesto ---------- */
-.manifesto-head {
-  max-width: 900px;
-  margin-bottom: 56px;
-}
-.manifesto-head .eyebrow {
-  display: block;
-}
-.manifesto-head h2 {
-  font-size: 44px;
-  font-style: italic;
-  max-width: 780px;
-}
-@media (max-width: 767px) {
-  .manifesto-head h2 {
-    font-size: 30px;
-  }
-}
-.manifesto-body {
-  display: grid;
-  grid-template-columns: 1.3fr 1px 0.8fr;
-  gap: 48px;
-}
-@media (max-width: 860px) {
-  .manifesto-body {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-.manifesto-rule {
+/* ---------- Who We Are: centered intro + photo grid ---------- */
+.who-we-are-rule {
+  height: 1px;
   background: var(--border);
+  max-width: var(--max-width);
+  margin: 0 0 48px;
+}
+.who-we-are-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 28px;
 }
 @media (max-width: 860px) {
-  .manifesto-rule {
-    display: none;
+  .who-we-are-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-.manifesto-copy p {
-  font-size: 17.5px;
+@media (max-width: 500px) {
+  .who-we-are-grid {
+    grid-template-columns: 1fr;
+  }
 }
-.manifesto-rail {
-  display: flex;
-  flex-direction: column;
+.who-we-are-photo {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 18px;
 }
-.rail-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
+.who-we-are-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.rail-item:first-child {
-  padding-top: 0;
+.who-we-are-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
-.rail-item:last-child {
-  border-bottom: none;
-}
-.rail-item .rail-icon {
-  color: var(--gold-dark);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.rail-item span {
-  font-weight: 600;
-  font-size: 15.5px;
-  color: var(--teal);
+.who-we-are-card p {
+  font-size: 14.5px;
+  margin-bottom: 0;
 }
 
 /* ---------- What We Do: accent panel + checklist ---------- */
@@ -1800,54 +1785,60 @@ img {
   margin-top: 3px;
 }
 
-/* ---------- Contact: restyled outline info panel ---------- */
-.contact-wrap-v2 {
-  display: grid;
-  grid-template-columns: 1fr 0.85fr;
-  gap: 56px;
+/* ---------- Footer: contact panel ---------- */
+.footer-contact {
+  padding: 56px 0 40px;
+  text-align: left;
 }
-@media (max-width: 860px) {
-  .contact-wrap-v2 {
+.footer-contact h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 28px;
+}
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 767px) {
+  .footer-contact-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
-.contact-info-v2 {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 40px;
-  background: var(--white);
-}
-.contact-info-v2 h3 {
-  font-size: 22px;
-}
-.contact-info-v2 .item {
+.footer-contact .item {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 24px;
 }
-.contact-info-v2 .item .icon-badge {
+.footer-contact .item .icon-badge {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--teal);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.contact-info-v2 .item .label {
+.footer-contact .item .label {
   font-size: 11.5px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--gold);
   font-weight: 600;
   margin-bottom: 3px;
 }
-.contact-info-v2 .item a,
-.contact-info-v2 .item span {
-  color: var(--teal);
+.footer-contact .item a,
+.footer-contact .item span {
+  color: rgba(255, 255, 255, 0.9);
   font-size: 15.5px;
   font-weight: 500;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 0;
+  text-align: center;
 }

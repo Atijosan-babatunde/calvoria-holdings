@@ -1,49 +1,50 @@
 import Reveal from "./Reveal";
-import { Building2, Users, Compass, ShieldCheck } from "lucide-react";
 
 const TRAITS = [
-  { icon: Building2, label: "Independently Owned" },
-  { icon: Users, label: "Operator-Led" },
-  { icon: Compass, label: "Methodical by Design" },
-  { icon: ShieldCheck, label: "Built for the Long Run" },
+  {
+    image: "/images/who-independent.jpg",
+    title: "Independently Owned",
+    desc: "We're not constrained by a fund's investment cycle or pressured by an exit deadline. Our decisions are driven by long-term judgment — patience to strengthen businesses over time, and conviction to invest decisively when the opportunity is right.",
+  },
+  {
+    image: "/images/who-operator.jpg",
+    title: "Operator-Led",
+    desc: "We don't just oversee the business — we become part of it, working alongside the people who know it best. The best opportunities to create value aren't found in presentations; they're uncovered by being close enough to see what others miss.",
+  },
+  {
+    image: "/images/who-structured.jpg",
+    title: "Methodical by Design",
+    desc: "Before accelerating growth, foundations are established — people, processes, systems, financial controls, governance. Nothing is overlooked. We believe strong businesses aren't built on momentum, but on the discipline and structure that allow growth to last.",
+  },
+  {
+    image: "/images/who-longterm.jpg",
+    title: "Built for the Long Run",
+    desc: "Every business carries a legacy worth preserving. Our role isn't to reshape it for a quick exit, but to strengthen it for the long term. We invest with patience, grow with purpose and clarity, and make long-term commitments to building lasting value.",
+  },
 ];
 
 export default function WhoWeAre() {
   return (
     <section id="who-we-are" className="section section-alt">
       <div className="container">
-        <Reveal className="manifesto-head" as="div">
+        <Reveal className="section-heading" as="div">
           <span className="eyebrow">Who We Are</span>
-          <h2>A steady, capable home for good businesses.</h2>
+          <h2>A responsible home for good businesses</h2>
+          <p>Calvoria Holdings is a privately held acquisition and holding company focused on acquiring, operating and growing established businesses with strong fundamentals and long-term potential.</p>
         </Reveal>
 
-        <div className="manifesto-body">
-          <Reveal className="manifesto-copy">
-            <p>Calvoria Holdings is an independently owned acquisition and holding company built around acquiring, operating and growing established businesses with solid fundamentals and room to grow further.</p>
-            <p>
-              We don&apos;t sit on the sidelines. We are operators at heart, with a deliberate, structured way of learning how a business runs, where its value really comes from, and where performance can be lifted. Our background spans business analysis, operating model design, process improvement and technology-led change — which means we look well past the spreadsheet. We examine how a business
-              functions at every layer: its customers, people, workflows, systems, data, governance, and the way revenue actually moves through it.
-            </p>
-            {/* <p style={{ marginBottom: 0 }}>
-              That gives us a genuine edge when it comes to acquiring and scaling a business. We
-              can spot what&apos;s already working, protect it, and layer in just enough structure
-              to help the business grow without losing what made it work in the first place.
-              We&apos;re especially drawn to owner-led businesses where the founder is weighing
-              succession, retirement, a phased exit, or simply wants a partner to help carry the
-              business into its next stage.
-            </p> */}
-          </Reveal>
+        <div className="who-we-are-rule" />
 
-          <div className="manifesto-rule" />
-
-          <Reveal as="div" className="manifesto-rail">
-            {TRAITS.map(({ icon: Icon, label }) => (
-              <div className="rail-item" key={label}>
-                <Icon size={18} className="rail-icon" />
-                <span>{label}</span>
+        <div className="who-we-are-grid">
+          {TRAITS.map(({ image, title, desc }) => (
+            <Reveal className="who-we-are-card" key={title}>
+              <div className="who-we-are-photo">
+                <img src={image} alt={title} />
               </div>
-            ))}
-          </Reveal>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

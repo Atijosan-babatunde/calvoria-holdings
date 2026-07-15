@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
 import Reveal from "./Reveal";
 
 export default function Contact() {
@@ -51,12 +50,12 @@ export default function Contact() {
           <h2>Let&apos;s start a conversation</h2>
         </Reveal>
 
-        <div className="contact-wrap-v2">
-          <Reveal className="contact-form" as="div">
-            {status === "success" ? (
-              <div className="form-success">Thank you! We will get back to you as soon as possible.</div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate>
+        <Reveal className="contact-form contact-form-wide" as="div">
+          {status === "success" ? (
+            <div className="form-success">Thank you! We will get back to you as soon as possible.</div>
+          ) : (
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="form-row-split">
                 <div className="form-row">
                   <label htmlFor="name">Name*</label>
                   <input id="name" type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
@@ -68,57 +67,26 @@ export default function Contact() {
                   <input id="email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
                   {errors.email && <div className="form-error">{errors.email}</div>}
                 </div>
+              </div>
 
-                <div className="form-row">
-                  <label htmlFor="message">Message*</label>
-                  <textarea id="message" rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
-                  {errors.message && <div className="form-error">{errors.message}</div>}
+              <div className="form-row">
+                <label htmlFor="message">Message*</label>
+                <textarea id="message" rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                {errors.message && <div className="form-error">{errors.message}</div>}
+              </div>
+
+              {status === "error" && (
+                <div className="form-error" style={{ marginBottom: 16 }}>
+                  There was an error submitting your message. Please try again.
                 </div>
+              )}
 
-                {status === "error" && (
-                  <div className="form-error" style={{ marginBottom: 16 }}>
-                    There was an error submitting your message. Please try again.
-                  </div>
-                )}
-
-                <button type="submit" className="btn btn-outline-navy" disabled={status === "sending"}>
-                  {status === "sending" ? "Sending…" : "Send"}
-                </button>
-              </form>
-            )}
-          </Reveal>
-
-          <Reveal className="contact-info-v2" as="div">
-            <h3>Get in touch</h3>
-            <div className="item">
-              <div className="icon-badge">
-                <Phone size={17} />
-              </div>
-              <div>
-                <div className="label">Telephone</div>
-                <a href="tel:+44 7534 371905">+44 7534 371905</a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="icon-badge">
-                <Mail size={17} />
-              </div>
-              <div>
-                <div className="label">E-mail</div>
-                <a href="mailto:hello@calvoriaholdings.com">hello@calvoriaholdings.com</a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="icon-badge">
-                <MapPin size={17} />
-              </div>
-              <div>
-                <div className="label">Location</div>
-                <span>[United Kingdom]</span>
-              </div>
-            </div>
-          </Reveal>
-        </div>
+              <button type="submit" className="btn btn-outline-navy" disabled={status === "sending"}>
+                {status === "sending" ? "Sending…" : "Send"}
+              </button>
+            </form>
+          )}
+        </Reveal>
       </div>
     </section>
   );
