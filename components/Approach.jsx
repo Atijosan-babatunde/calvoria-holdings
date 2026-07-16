@@ -5,12 +5,12 @@ const PRINCIPLES = [
   {
     icon: Search,
     title: "Understand first, change second",
-    desc: "We start by genuinely learning how the business runs today — its people, workflows, systems, customer experience, revenue flow, and where the friction is. We don't touch anything until we understand why it works.",
+    desc: "We start by genuinely learning how the business runs today its people, workflows, systems, customer experience, revenue flow, and where the friction is. We don't touch anything until we understand why it works.",
   },
   {
     icon: ShieldCheck,
     title: "Protect what already works",
-    desc: "Every solid business has real strengths worth guarding — customer relationships, staff know-how, reputation, supplier ties, founder instincts. We protect those while fixing what's holding growth back.",
+    desc: "Every solid business has real strengths worth guarding customer relationships, staff know-how, reputation, supplier ties, founder instincts. We protect those while fixing what's holding growth back.",
   },
   {
     icon: LayoutGrid,
@@ -30,7 +30,7 @@ const PRINCIPLES = [
   {
     icon: HeartHandshake,
     title: "Lead with care and continuity",
-    desc: "Selling a business is personal, and we treat it that way. We approach succession, transition and integration with respect — the goal is always to protect the business, its people, and its legacy.",
+    desc: "Selling a business is personal, and we treat it that way. We approach succession, transition and integration with respect the goal is always to protect the business, its people, and its legacy.",
   },
 ];
 

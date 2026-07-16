@@ -5,7 +5,7 @@ const AREAS = [
   {
     icon: LayoutGrid,
     title: "Operating model design",
-    desc: "We map how the business is structured and how work actually flows across teams, systems and customers — then pinpoint what needs to change to support stability and growth.",
+    desc: "We map how the business is structured and how work actually flows across teams, systems and customers then pinpoint what needs to change to support stability and growth.",
   },
   {
     icon: Workflow,
@@ -20,7 +20,7 @@ const AREAS = [
   {
     icon: BarChart3,
     title: "Data and reporting",
-    desc: "We help move the business from gut-feel decisions to real visibility, through dashboards, reporting, and management information that's actually useful.",
+    desc: "We help move the business from gut feel decisions to real visibility, through dashboards, reporting, and management information that's actually useful.",
   },
   {
     icon: ShieldCheck,

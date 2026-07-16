@@ -1,17 +1,5 @@
 import Reveal from "./Reveal";
-import {
-  Workflow,
-  Route,
-  TrendingUp,
-  ClipboardList,
-  Users,
-  Cpu,
-  ShieldCheck,
-  Gauge,
-  Headset,
-  BarChart3,
-  Repeat,
-} from "lucide-react";
+import { Workflow, Route, TrendingUp, ClipboardList, Users, Cpu, ShieldCheck, Gauge, Headset, BarChart3, Repeat } from "lucide-react";
 
 const AREAS = [
   { icon: Workflow, label: "Core business processes" },
@@ -36,12 +24,8 @@ export default function WhatWeDo() {
             <span className="eyebrow">What We Do</span>
             <h2>Strengthening what&apos;s underneath the business</h2>
             <p>
-              Calvoria Holdings acquires and builds on established businesses that have room to
-              grow through better structure, stronger operations, and clearer direction. We focus
-              on businesses that already have real demand, a trading track record, and a solid
-              market position — our job is to strengthen the operating engine underneath it.
-              Most established businesses don&apos;t need reinventing. They need to be understood
-              properly, steadied where it counts, and given the right operating model to grow on.
+              Calvoria Holdings acquires and builds on established businesses that have room to grow through better structure, stronger operations, and clearer direction. We focus on businesses that already have real demand, a trading track record, and a solid market position our job is to strengthen the operating engine underneath it. Most established businesses don&apos;t need reinventing. They
+              need to be understood properly, steadied where it counts, and given the right operating model to grow on.
             </p>
           </div>
           <div className="capability-list">

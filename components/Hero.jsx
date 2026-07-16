@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero-content">
           <h1>Strong Foundations. Thoughtful Growth.</h1>
-          <p className="lead">Calvoria Holdings acquires and operates established, owner-led businesses — safeguarding what already works while bringing the leadership and resources needed to take them further.</p>
+          <p className="lead">Calvoria Holdings acquires and operates established, owner led businesses safeguarding what already works while bringing the leadership and resources needed to take them further.</p>
           <div className="hero-actions">
             <a
               href="#contact"
